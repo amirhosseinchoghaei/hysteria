@@ -19,6 +19,7 @@ clear
 
 service passwall stop
 
+
 if [[ -f hyster.ipk ]]
 
 then 
@@ -65,16 +66,24 @@ else
 
 fi
 
+
+RESULT=`grep -o /tmp/usr/bin/hysteria /etc/config/passwall`
+            if [ "$RESULT" == "/tmp/usr/bin/hysteria" ]; then
+            echo -e "${GREEN}Cool !${NC}"
+
+ else
+
+            echo -e "${YELLOW}Replacing${YELLOW}"
+            sed -i 's/usr\/bin\/hysteria/tmp\/usr\/bin\/hysteria/g' /etc/config/passwall
+
+
+fi
+
+
 service passwall restart
 cd /root/
 
 echo "Done !"
-
-
-
-
-
-
 
 
 rm hysteria.sh
