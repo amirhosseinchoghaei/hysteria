@@ -9,7 +9,7 @@ Install Hysteria On router
 
 1- Hysteria version : 1.3.5 latest update !
 ```
-wget https://raw.githubusercontent.com/amirhosseinchoghaei/mi4agigabit/main/hysteria.sh && chmod 777 hysteria.sh && sh hysteria.sh
+wget https://raw.githubusercontent.com/amirhosseinchoghaei/hysteria/main/hysteria.sh && chmod 777 hysteria.sh && sh hysteria.sh
 ```
 
 Done !
